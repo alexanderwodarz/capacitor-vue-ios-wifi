@@ -1,10 +1,11 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { WifiPlugin } from './definitions';
+import type { WifiPluginPlugin } from './definitions';
 
-const Wifi = registerPlugin<WifiPlugin>('Wifi', {
-  web: () => import('./web').then(m => new m.WifiWeb()),
+const Wifi = registerPlugin<WifiPluginPlugin>('Wifi', {
+  web: () => import('./web').then(m => new m.WifiPluginWeb()),
 });
+
 
 export * from './definitions';
 export { Wifi };
